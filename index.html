@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="procesar.html" method="post">
+        <fieldset>
+            <legend>Control del formulario</legend>
+            <label for="usuarios">Usuario:</label>
+            <input type="text"
+            pattern="[A-Za-z]{0,5}"
+            title="Ingresar un nombre de máximo 5 letras"
+            value="Harold"
+            id="usuario"
+            required
+            placeholder="Ingrese el usuario"
+            name="usuario"
+            />
+            <br>
+            <br>
+            <label for="correo">Correo:</label>
+            <input type="email"
+            size="40"
+            id="correo"
+            name="correo" 
+            multiple
+            />
+            <!--multiple permite ingresar vario correos en el input separados por comas-->
+            <br>
+            <br>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" 
+            name="telefono" 
+            id="telefono"
+            >
+            <br>
+            <br>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+            <br>
+            <br>
+            <!--Radio-->
+            <label for="joven">Joven:</label>
+            <input type="radio"
+            name="edad"
+            value="0-25"
+            >
+            <input type="radio"
+            name="edad"
+            value="26-50"
+            >
+            <input type="radio"
+            name="edad"
+            value="max50"
+            >
+            <br>
+            <br>
+            <label for="terminos">Terminos:</label>
+            <input type="checkbox" 
+            name="terminos"
+            id="terminos"
+            >
+            <br>
+            <br>
+            <select name="" id="">
+                <option value="co" selected>Colombia</option>
+                <option value="br">Brasil</option>
+                <option value="ca">Canada</option>
+                <option value="ec">Ecuador</option>
+            </select>
+            <br>
+            <br>
+
+            <button type="reset">Borrar</button>
+            <button type="submit">Enviar</button>
+            <button type="button" onclick="mostrarMensaje()">Button</button>
+            <button type="button" id="otroBoton">boton 2 </button>
+        </fieldset>
+        <script src="programa.js"></script>
+    </form>
+</body>
+</html>
